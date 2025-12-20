@@ -1,6 +1,6 @@
 # PyTorch Inc Backend
 
-Welcome to the PyTorch Inc Backend repository. This project provides custom in-network computing backend support for PyTorch.
+Welcome to the PyTorch Webgpu Backend repository. This project provides custom webgpu computing backend support for PyTorch.
 
 ## Table of Contents
 
@@ -30,18 +30,9 @@ source ./venv/bin/activate
 
 Install the dependencies for both c++ and python:
 
-This package depends on `pytorch_inc_compute` for the `incc` library. There atleast for now, clone both the repos in your local in order to run this. (Instructions on the other package)
-This configuration is done using vcpkg's overlay ports in the vcpkg-configuration.json file.
-
 ```bash
 vcpkg install
 pip install -r requirements.txt
-```
-
-Everytime `pytorch_inc_compute` changes, it must be recompiled and linked into this repository.
-
-```bash
-cd .. && vcpkg install inccompute --overlay-ports=inc_compute && cd ./pytorch_inc_extension && vcpkg install 
 ```
 
 ## Usage
